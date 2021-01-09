@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126400772C6F59912AB2CD49 /* libPods-Cook4Me.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A6BF27605DCFA77ECDF733 /* libPods-Cook4Me.a */; };
 		47A739E525A95BD900FA5251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A739E425A95BD900FA5251 /* AppDelegate.swift */; };
 		47A739E725A95BD900FA5251 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A739E625A95BD900FA5251 /* SceneDelegate.swift */; };
 		47A739EC25A95BD900FA5251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A739EA25A95BD900FA5251 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		47A73A3925A961AC00FA5251 /* CustomDontHaveAccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A3825A961AC00FA5251 /* CustomDontHaveAccountButton.swift */; };
 		47A73A3E25A964FC00FA5251 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A3D25A964FC00FA5251 /* RegistrationController.swift */; };
 		47A73A4325A9675800FA5251 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A4225A9675800FA5251 /* AuthenticationViewModel.swift */; };
+		47A73A5425AA6C9500FA5251 /* cooker.json in Resources */ = {isa = PBXBuildFile; fileRef = 47A73A5325AA6C9500FA5251 /* cooker.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F9BD170D86283D2DAF506C4 /* Pods-Cook4Me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cook4Me.release.xcconfig"; path = "Target Support Files/Pods-Cook4Me/Pods-Cook4Me.release.xcconfig"; sourceTree = "<group>"; };
 		47A739E125A95BD900FA5251 /* Cook4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cook4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A739E425A95BD900FA5251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47A739E625A95BD900FA5251 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,9 @@
 		47A73A3825A961AC00FA5251 /* CustomDontHaveAccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDontHaveAccountButton.swift; sourceTree = "<group>"; };
 		47A73A3D25A964FC00FA5251 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		47A73A4225A9675800FA5251 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		47A73A5325AA6C9500FA5251 /* cooker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cooker.json; sourceTree = "<group>"; };
+		70672E56D551E6B4E61FC5B6 /* Pods-Cook4Me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cook4Me.debug.xcconfig"; path = "Target Support Files/Pods-Cook4Me/Pods-Cook4Me.debug.xcconfig"; sourceTree = "<group>"; };
+		B5A6BF27605DCFA77ECDF733 /* libPods-Cook4Me.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cook4Me.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				126400772C6F59912AB2CD49 /* libPods-Cook4Me.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +104,8 @@
 				47A739FA25A95BDD00FA5251 /* Cook4MeTests */,
 				47A73A0525A95BDE00FA5251 /* Cook4MeUITests */,
 				47A739E225A95BD900FA5251 /* Products */,
+				BB467A1964F0C7947F34CEDC /* Pods */,
+				B0D2FD166DA86A636CAE19BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,9 +193,27 @@
 		47A73A2825A95FE000FA5251 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				47A73A5325AA6C9500FA5251 /* cooker.json */,
 				47A739ED25A95BDD00FA5251 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		B0D2FD166DA86A636CAE19BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6BF27605DCFA77ECDF733 /* libPods-Cook4Me.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB467A1964F0C7947F34CEDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70672E56D551E6B4E61FC5B6 /* Pods-Cook4Me.debug.xcconfig */,
+				2F9BD170D86283D2DAF506C4 /* Pods-Cook4Me.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47A73A0B25A95BDE00FA5251 /* Build configuration list for PBXNativeTarget "Cook4Me" */;
 			buildPhases = (
+				63DE3B4D070C781A9402B74E /* [CP] Check Pods Manifest.lock */,
 				47A739DD25A95BD900FA5251 /* Sources */,
 				47A739DE25A95BD900FA5251 /* Frameworks */,
 				47A739DF25A95BD900FA5251 /* Resources */,
@@ -294,6 +322,7 @@
 			files = (
 				47A739F125A95BDD00FA5251 /* LaunchScreen.storyboard in Resources */,
 				47A739EE25A95BDD00FA5251 /* Assets.xcassets in Resources */,
+				47A73A5425AA6C9500FA5251 /* cooker.json in Resources */,
 				47A739EC25A95BD900FA5251 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +342,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63DE3B4D070C781A9402B74E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cook4Me-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47A739DD25A95BD900FA5251 /* Sources */ = {
@@ -501,6 +555,7 @@
 		};
 		47A73A0C25A95BDE00FA5251 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70672E56D551E6B4E61FC5B6 /* Pods-Cook4Me.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -520,6 +575,7 @@
 		};
 		47A73A0D25A95BDE00FA5251 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F9BD170D86283D2DAF506C4 /* Pods-Cook4Me.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

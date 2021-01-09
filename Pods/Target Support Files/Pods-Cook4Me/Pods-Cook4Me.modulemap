@@ -1,0 +1,6 @@
+module Pods_Cook4Me {
+  umbrella header "Pods-Cook4Me-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Lottie
 
 class LoginController: UIViewController, UITextFieldDelegate {
     
     //MARK:- Properties
+    private let animationView = AnimationView()
+    
     private var viewModel = LoginViewModel()
 
     private let titlelabel = CustomLabel(title: "Welcome\nTo\nCook4Me", name: "Futura-Bold", fontSize: 35, color: .white)
@@ -69,6 +72,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        animationView.play()
+    }
     //MARK:- Helpers
     
     func checkFormStatus(){
@@ -90,8 +96,20 @@ class LoginController: UIViewController, UITextFieldDelegate {
     }
     
     private func configureUI(){
+        
+        animationView.animation = Animation.named("cooker")
+        animationView.loopMode = .loop
+        animationView.contentMode = .scaleAspectFit
+        animationView.animationSpeed = 0.8
+        animationView.play()
+        
         view.backgroundColor = .backgroundColor
         navigationController?.navigationBar.isHidden = true
+        
+        view.addSubview(animationView)
+        animationView.anchor(top: view.safeAreaLayoutGuide.topAnchor,
+                             left:  view.leftAnchor, right:  view.rightAnchor,
+                             paddingRight: -250, width: 200, height: 200)
         
         view.addSubview(titlelabel)
         titlelabel.anchor(top: view.safeAreaLayoutGuide.topAnchor,
@@ -122,6 +140,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         
     }
     
+    ///Tap outside to dimiss keyboard
     func tapOutsideToDimissKeyboard(){
         let tapOutside: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapOutside.cancelsTouchesInView = false
