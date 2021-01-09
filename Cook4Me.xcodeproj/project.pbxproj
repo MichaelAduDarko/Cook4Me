@@ -20,6 +20,7 @@
 		47A73A2F25A9615D00FA5251 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A2E25A9615D00FA5251 /* CustomTextField.swift */; };
 		47A73A3425A9618000FA5251 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A3325A9618000FA5251 /* CustomButton.swift */; };
 		47A73A3925A961AC00FA5251 /* CustomDontHaveAccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A3825A961AC00FA5251 /* CustomDontHaveAccountButton.swift */; };
+		47A73A3E25A964FC00FA5251 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A3D25A964FC00FA5251 /* RegistrationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		47A73A2E25A9615D00FA5251 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		47A73A3325A9618000FA5251 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		47A73A3825A961AC00FA5251 /* CustomDontHaveAccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDontHaveAccountButton.swift; sourceTree = "<group>"; };
+		47A73A3D25A964FC00FA5251 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				47A73A1D25A95DB800FA5251 /* LoginController.swift */,
+				47A73A3D25A964FC00FA5251 /* RegistrationController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47A73A2A25A9600900FA5251 /* Extension.swift in Sources */,
+				47A73A3E25A964FC00FA5251 /* RegistrationController.swift in Sources */,
 				47A739E525A95BD900FA5251 /* AppDelegate.swift in Sources */,
 				47A73A2F25A9615D00FA5251 /* CustomTextField.swift in Sources */,
 				47A73A3925A961AC00FA5251 /* CustomDontHaveAccountButton.swift in Sources */,
