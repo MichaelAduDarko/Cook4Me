@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		47A739E525A95BD900FA5251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A739E425A95BD900FA5251 /* AppDelegate.swift */; };
 		47A739E725A95BD900FA5251 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A739E625A95BD900FA5251 /* SceneDelegate.swift */; };
-		47A739E925A95BD900FA5251 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A739E825A95BD900FA5251 /* ViewController.swift */; };
 		47A739EC25A95BD900FA5251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A739EA25A95BD900FA5251 /* Main.storyboard */; };
 		47A739EE25A95BDD00FA5251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47A739ED25A95BDD00FA5251 /* Assets.xcassets */; };
 		47A739F125A95BDD00FA5251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A739EF25A95BDD00FA5251 /* LaunchScreen.storyboard */; };
 		47A739FC25A95BDD00FA5251 /* Cook4MeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A739FB25A95BDD00FA5251 /* Cook4MeTests.swift */; };
 		47A73A0725A95BDE00FA5251 /* Cook4MeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A0625A95BDE00FA5251 /* Cook4MeUITests.swift */; };
+		47A73A1E25A95DB800FA5251 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A1D25A95DB800FA5251 /* LoginController.swift */; };
+		47A73A2325A95EE100FA5251 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A2225A95EE100FA5251 /* CustomLabel.swift */; };
+		47A73A2A25A9600900FA5251 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A2925A9600900FA5251 /* Extension.swift */; };
+		47A73A2F25A9615D00FA5251 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A2E25A9615D00FA5251 /* CustomTextField.swift */; };
+		47A73A3425A9618000FA5251 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A3325A9618000FA5251 /* CustomButton.swift */; };
+		47A73A3925A961AC00FA5251 /* CustomDontHaveAccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A3825A961AC00FA5251 /* CustomDontHaveAccountButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 		47A739E125A95BD900FA5251 /* Cook4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cook4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A739E425A95BD900FA5251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47A739E625A95BD900FA5251 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47A739E825A95BD900FA5251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47A739EB25A95BD900FA5251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47A739ED25A95BDD00FA5251 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47A739F025A95BDD00FA5251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		47A73A0225A95BDE00FA5251 /* Cook4MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cook4MeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A73A0625A95BDE00FA5251 /* Cook4MeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cook4MeUITests.swift; sourceTree = "<group>"; };
 		47A73A0825A95BDE00FA5251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47A73A1D25A95DB800FA5251 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		47A73A2225A95EE100FA5251 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		47A73A2925A9600900FA5251 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		47A73A2E25A9615D00FA5251 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		47A73A3325A9618000FA5251 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		47A73A3825A961AC00FA5251 /* CustomDontHaveAccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDontHaveAccountButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +109,14 @@
 		47A739E325A95BD900FA5251 /* Cook4Me */ = {
 			isa = PBXGroup;
 			children = (
+				47A73A2825A95FE000FA5251 /* Assets */,
+				47A73A2725A95FBF00FA5251 /* Utils */,
+				47A73A1925A95D7C00FA5251 /* ViewModel */,
+				47A73A1825A95D6800FA5251 /* View */,
+				47A73A1725A95D4100FA5251 /* Models */,
 				47A739E425A95BD900FA5251 /* AppDelegate.swift */,
 				47A739E625A95BD900FA5251 /* SceneDelegate.swift */,
-				47A739E825A95BD900FA5251 /* ViewController.swift */,
 				47A739EA25A95BD900FA5251 /* Main.storyboard */,
-				47A739ED25A95BDD00FA5251 /* Assets.xcassets */,
 				47A739EF25A95BDD00FA5251 /* LaunchScreen.storyboard */,
 				47A739F225A95BDD00FA5251 /* Info.plist */,
 			);
@@ -126,6 +139,48 @@
 				47A73A0825A95BDE00FA5251 /* Info.plist */,
 			);
 			path = Cook4MeUITests;
+			sourceTree = "<group>";
+		};
+		47A73A1725A95D4100FA5251 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				47A73A1D25A95DB800FA5251 /* LoginController.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		47A73A1825A95D6800FA5251 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47A73A2225A95EE100FA5251 /* CustomLabel.swift */,
+				47A73A2E25A9615D00FA5251 /* CustomTextField.swift */,
+				47A73A3325A9618000FA5251 /* CustomButton.swift */,
+				47A73A3825A961AC00FA5251 /* CustomDontHaveAccountButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47A73A1925A95D7C00FA5251 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		47A73A2725A95FBF00FA5251 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				47A73A2925A9600900FA5251 /* Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		47A73A2825A95FE000FA5251 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				47A739ED25A95BDD00FA5251 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47A739E925A95BD900FA5251 /* ViewController.swift in Sources */,
+				47A73A2A25A9600900FA5251 /* Extension.swift in Sources */,
 				47A739E525A95BD900FA5251 /* AppDelegate.swift in Sources */,
+				47A73A2F25A9615D00FA5251 /* CustomTextField.swift in Sources */,
+				47A73A3925A961AC00FA5251 /* CustomDontHaveAccountButton.swift in Sources */,
+				47A73A1E25A95DB800FA5251 /* LoginController.swift in Sources */,
+				47A73A3425A9618000FA5251 /* CustomButton.swift in Sources */,
 				47A739E725A95BD900FA5251 /* SceneDelegate.swift in Sources */,
+				47A73A2325A95EE100FA5251 /* CustomLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
