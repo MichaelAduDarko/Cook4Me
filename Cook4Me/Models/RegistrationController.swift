@@ -68,12 +68,14 @@ class RegistrationController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFieldObservers()
+        tapOutsideToDimissKeyboard()
         configureUI()
         emailTextfield.delegate = self
         fullNameTextfield.delegate = self
         passwordTextField.delegate = self
     }
     
+    /// Checks if form is valid to enable the button for click
     func checkFormStatus(){
         if viewModel.formIsValid {
             SignUpButton.isEnabled = true
@@ -85,6 +87,8 @@ class RegistrationController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    /// Alerts observers when the text in a text field changes
     func configureTextFieldObservers(){
         emailTextfield.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         fullNameTextfield.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
@@ -117,6 +121,18 @@ class RegistrationController: UIViewController, UITextFieldDelegate {
         dontHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,
                                      right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
         
+    }
+    
+    func tapOutsideToDimissKeyboard(){
+        let tapOutside: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapOutside.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapOutside)
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 

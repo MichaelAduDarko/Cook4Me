@@ -39,9 +39,13 @@ class LoginController: UIViewController, UITextFieldDelegate {
      print("12334")
     }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     
     @objc func handleShowSignUp(){
-    
+        
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
     }
@@ -60,6 +64,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         configureUI()
         configureTextFieldObservers()
+        tapOutsideToDimissKeyboard()
         emailTextfield.delegate = self
         passwordTextField.delegate = self
     }
@@ -117,4 +122,15 @@ class LoginController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func tapOutsideToDimissKeyboard(){
+        let tapOutside: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapOutside.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapOutside)
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
