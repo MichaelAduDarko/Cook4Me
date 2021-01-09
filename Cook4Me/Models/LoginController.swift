@@ -7,9 +7,11 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class LoginController: UIViewController, UITextFieldDelegate {
     
     //MARK:- Properties
+    private var viewModel = LoginViewModel()
+
     private let titlelabel = CustomLabel(title: "Welcome\nTo\nCook4Me", name: "Futura-Bold", fontSize: 35, color: .white)
     
     private let signInLabel = CustomLabel(title: "Sign In", name: "Futura-Bold", fontSize: 35, color: .systemPink)
@@ -44,11 +46,43 @@ class LoginController: UIViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       configureUI()
+    
+    @objc func textDidChange(sender: UITextField){
+        if sender == emailTextfield{
+            viewModel.email = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        checkFormStatus()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureUI()
+        configureTextFieldObservers()
+        emailTextfield.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    //MARK:- Helpers
+    
+    func checkFormStatus(){
+        if viewModel.formIsValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = .systemPink
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        }
+        
+    }
+    
+    
+    func configureTextFieldObservers(){
+        emailTextfield.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        
+    }
     
     private func configureUI(){
         view.backgroundColor = .backgroundColor
@@ -82,4 +116,5 @@ class LoginController: UIViewController {
                                      right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
         
     }
+    
 }

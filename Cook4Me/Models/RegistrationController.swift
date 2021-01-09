@@ -7,14 +7,14 @@
 
 import UIKit
 
-class RegistrationController: UIViewController {
+class RegistrationController: UIViewController, UITextFieldDelegate {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     //MARK:- Properties
-//    private var viewModel = RegistrationViewModel()
+    private var viewModel = RegistrationViewModel()
     
     private let signUpLabel = CustomLabel(title: "Sign Up", name: "Futura-Bold", fontSize: 40, color: .systemPink)
     
@@ -48,12 +48,49 @@ class RegistrationController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    //Form Validation
+    @objc func textDidChange(sender: UITextField){
+        if sender == emailTextfield{
+            viewModel.email = sender.text
+        } else if sender == fullNameTextfield{
+            viewModel.fullname = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+       checkFormStatus()
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTextFieldObservers()
         configureUI()
+        emailTextfield.delegate = self
+        fullNameTextfield.delegate = self
+        passwordTextField.delegate = self
     }
     
+    func checkFormStatus(){
+        if viewModel.formIsValid {
+            SignUpButton.isEnabled = true
+            SignUpButton.backgroundColor = .systemPink
+        } else {
+            SignUpButton.isEnabled = false
+            SignUpButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        }
+        
+    }
+    
+    func configureTextFieldObservers(){
+        emailTextfield.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fullNameTextfield.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        
+    }
     
     private func configureUI(){
         view.backgroundColor = .backgroundColor
@@ -81,4 +118,6 @@ class RegistrationController: UIViewController {
                                      right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
         
     }
+    
+
 }
