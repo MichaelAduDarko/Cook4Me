@@ -15,9 +15,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     private var viewModel = LoginViewModel()
 
-    private let titlelabel = CustomLabel(title: "Welcome\nTo\nCook4Me", name: "Futura-Bold", fontSize: 35, color: .white)
+    private let titlelabel = CustomLabel(title: "Welcome\nTo\nCook4Me", name: "Futura-Bold", fontSize: 30, color: .white)
     
-    private let signInLabel = CustomLabel(title: "Sign In", name: "Futura-Bold", fontSize: 35, color: .systemPink)
+    private let logInLabel = CustomLabel(title: "Log In", name: "Futura-Bold", fontSize: 25, color: .systemPink)
     
     
     private let emailTextfield =  CustomTextField(placeholder: "Email",autoCorrectionType: .no, secureTextEntry: false)
@@ -30,12 +30,19 @@ class LoginController: UIViewController, UITextFieldDelegate {
         return button
     }()
     
+    private let forgotPasswordButton: CustomDontHaveAccountButton = {
+        let button = CustomDontHaveAccountButton(title: "Forgot your password?", secondtitle: "Reset")
+        button.addTarget(self, action: #selector(handleForgotPassword), for: .touchUpInside)
+        return button
+    }()
+    
     private let dontHaveAccountButton: CustomDontHaveAccountButton = {
         let button = CustomDontHaveAccountButton(title: "Don't have an account?", secondtitle: "Sign Up")
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
     
+    private let dividerView = DividerView()
     
     //MARK:- Selectors
     @objc func handleLogin(){
@@ -46,6 +53,11 @@ class LoginController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    @objc func handleForgotPassword(){
+     
+        print("Forgot password button tapped")
+    }
+    
     
     @objc func handleShowSignUp(){
         
@@ -53,6 +65,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         navigationController?.pushViewController(controller, animated: true)
     }
     
+   
     
     @objc func textDidChange(sender: UITextField){
         if sender == emailTextfield{
@@ -114,23 +127,23 @@ class LoginController: UIViewController, UITextFieldDelegate {
         view.addSubview(titlelabel)
         titlelabel.anchor(top: view.safeAreaLayoutGuide.topAnchor,
                           left: view.leftAnchor, right: view.rightAnchor,
-                          paddingTop: 40, paddingLeft: 10, paddingRight: 10)
+                          paddingTop: 10, paddingLeft: 10, paddingRight: 10)
         
-        view.addSubview(signInLabel)
-        signInLabel.anchor(top: titlelabel.bottomAnchor,left: view.leftAnchor,
-                           paddingTop: 100, paddingLeft: 30)
+        view.addSubview(logInLabel)
+        logInLabel.anchor(top: titlelabel.bottomAnchor,left: view.leftAnchor,
+                           paddingTop: 70, paddingLeft: 30)
         
         
         
-        let stackView = UIStackView(arrangedSubviews: [emailTextfield,passwordTextField, loginButton])
+        let stackView = UIStackView(arrangedSubviews: [emailTextfield,passwordTextField, loginButton, forgotPasswordButton, dividerView])
         stackView.checkIfAutoLayOut()
         stackView.axis = .vertical
-        stackView.spacing = 16
+        stackView.spacing = 10
         
         
         view.addSubview(stackView)
-        stackView.anchor(top: signInLabel.bottomAnchor, left: view.leftAnchor,
-                         right: view.rightAnchor, paddingTop: 20,
+        stackView.anchor(top: logInLabel.bottomAnchor, left: view.leftAnchor,
+                         right: view.rightAnchor, paddingTop: 15,
                          paddingLeft: 30, paddingRight: 30)
         
         

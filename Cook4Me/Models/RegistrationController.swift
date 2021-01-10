@@ -25,7 +25,7 @@ class RegistrationController: UIViewController, UITextFieldDelegate {
     private let passwordTextField = CustomTextField (placeholder: "Password", secureTextEntry: true)
     
     private let SignUpButton: CustomButton = {
-        let button = CustomButton(title: "Log In")
+        let button = CustomButton(title: "Sign Up")
         button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         return button
     }()
