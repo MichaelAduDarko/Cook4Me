@@ -25,6 +25,7 @@
 		47A73A4325A9675800FA5251 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A73A4225A9675800FA5251 /* AuthenticationViewModel.swift */; };
 		47A73A5425AA6C9500FA5251 /* cooker.json in Resources */ = {isa = PBXBuildFile; fileRef = 47A73A5325AA6C9500FA5251 /* cooker.json */; };
 		47FE731925AA75D7002D9200 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE731825AA75D7002D9200 /* DividerView.swift */; };
+		47FE732325AA8458002D9200 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE732225AA8458002D9200 /* ResetPasswordController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		47A73A4225A9675800FA5251 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		47A73A5325AA6C9500FA5251 /* cooker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cooker.json; sourceTree = "<group>"; };
 		47FE731825AA75D7002D9200 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		47FE732225AA8458002D9200 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		70672E56D551E6B4E61FC5B6 /* Pods-Cook4Me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cook4Me.debug.xcconfig"; path = "Target Support Files/Pods-Cook4Me/Pods-Cook4Me.debug.xcconfig"; sourceTree = "<group>"; };
 		B5A6BF27605DCFA77ECDF733 /* libPods-Cook4Me.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cook4Me.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 			children = (
 				47A73A1D25A95DB800FA5251 /* LoginController.swift */,
 				47A73A3D25A964FC00FA5251 /* RegistrationController.swift */,
+				47FE732225AA8458002D9200 /* ResetPasswordController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			files = (
 				47FE731925AA75D7002D9200 /* DividerView.swift in Sources */,
 				47A73A2A25A9600900FA5251 /* Extension.swift in Sources */,
+				47FE732325AA8458002D9200 /* ResetPasswordController.swift in Sources */,
 				47A73A3E25A964FC00FA5251 /* RegistrationController.swift in Sources */,
 				47A739E525A95BD900FA5251 /* AppDelegate.swift in Sources */,
 				47A73A2F25A9615D00FA5251 /* CustomTextField.swift in Sources */,

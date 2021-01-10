@@ -44,29 +44,42 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     private let dividerView = DividerView()
     
+    
+    private let googleLoginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "google").withRenderingMode(.alwaysOriginal) , for: .normal)
+        button.setTitle(" Log in with Google", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.addTarget(self , action: #selector(handleGoogleButton), for: .touchUpInside)
+        return button
+    }()
+   
     //MARK:- Selectors
+    
     @objc func handleLogin(){
      print("12334")
+    }
+    
+    @objc func handleForgotPassword(){
+        let controller = RessetPasswordController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func handleGoogleButton(){
+        print("Google Button tapped ")
+    }
+    
+    
+    @objc func handleShowSignUp(){
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    @objc func handleForgotPassword(){
-     
-        print("Forgot password button tapped")
-    }
-    
-    
-    @objc func handleShowSignUp(){
-        
-        let controller = RegistrationController()
-        navigationController?.pushViewController(controller, animated: true)
-    }
-    
    
-    
     @objc func textDidChange(sender: UITextField){
         if sender == emailTextfield{
             viewModel.email = sender.text
@@ -126,19 +139,21 @@ class LoginController: UIViewController, UITextFieldDelegate {
         
         view.addSubview(titlelabel)
         titlelabel.anchor(top: view.safeAreaLayoutGuide.topAnchor,
-                          left: view.leftAnchor, right: view.rightAnchor,
-                          paddingTop: 10, paddingLeft: 10, paddingRight: 10)
+                          left: view.leftAnchor,
+                          paddingTop: 20, paddingLeft: 30)
         
         view.addSubview(logInLabel)
         logInLabel.anchor(top: titlelabel.bottomAnchor,left: view.leftAnchor,
-                           paddingTop: 70, paddingLeft: 30)
+                           paddingTop: 65, paddingLeft: 30)
         
         
         
-        let stackView = UIStackView(arrangedSubviews: [emailTextfield,passwordTextField, loginButton, forgotPasswordButton, dividerView])
+        let stackView = UIStackView(arrangedSubviews:[emailTextfield,passwordTextField,
+                                                      loginButton, forgotPasswordButton,
+                                                      dividerView, googleLoginButton])
         stackView.checkIfAutoLayOut()
         stackView.axis = .vertical
-        stackView.spacing = 10
+        stackView.spacing = 13
         
         
         view.addSubview(stackView)
