@@ -126,15 +126,13 @@
 		47A739E325A95BD900FA5251 /* Cook4Me */ = {
 			isa = PBXGroup;
 			children = (
+				47FE732E25AAB4A8002D9200 /* StoryBoard */,
+				47FE732A25AAB2D1002D9200 /* Models */,
 				47A73A2825A95FE000FA5251 /* Assets */,
 				47A73A2725A95FBF00FA5251 /* Utils */,
 				47A73A1925A95D7C00FA5251 /* ViewModel */,
 				47A73A1825A95D6800FA5251 /* View */,
-				47A73A1725A95D4100FA5251 /* Models */,
-				47A739E425A95BD900FA5251 /* AppDelegate.swift */,
-				47A739E625A95BD900FA5251 /* SceneDelegate.swift */,
-				47A739EA25A95BD900FA5251 /* Main.storyboard */,
-				47A739EF25A95BDD00FA5251 /* LaunchScreen.storyboard */,
+				47A73A1725A95D4100FA5251 /* Controller */,
 				47A739F225A95BDD00FA5251 /* Info.plist */,
 			);
 			path = Cook4Me;
@@ -158,14 +156,14 @@
 			path = Cook4MeUITests;
 			sourceTree = "<group>";
 		};
-		47A73A1725A95D4100FA5251 /* Models */ = {
+		47A73A1725A95D4100FA5251 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				47A73A1D25A95DB800FA5251 /* LoginController.swift */,
 				47A73A3D25A964FC00FA5251 /* RegistrationController.swift */,
 				47FE732225AA8458002D9200 /* ResetPasswordController.swift */,
 			);
-			path = Models;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		47A73A1825A95D6800FA5251 /* View */ = {
@@ -191,6 +189,8 @@
 		47A73A2725A95FBF00FA5251 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				47A739E625A95BD900FA5251 /* SceneDelegate.swift */,
+				47A739E425A95BD900FA5251 /* AppDelegate.swift */,
 				47A73A2925A9600900FA5251 /* Extension.swift */,
 			);
 			path = Utils;
@@ -203,6 +203,22 @@
 				47A739ED25A95BDD00FA5251 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		47FE732A25AAB2D1002D9200 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		47FE732E25AAB4A8002D9200 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				47A739EA25A95BD900FA5251 /* Main.storyboard */,
+				47A739EF25A95BDD00FA5251 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 		B0D2FD166DA86A636CAE19BA /* Frameworks */ = {

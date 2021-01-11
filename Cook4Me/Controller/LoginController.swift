@@ -11,6 +11,7 @@ import Lottie
 class LoginController: UIViewController, UITextFieldDelegate {
     
     //MARK:- Properties
+    
     private let animationView = AnimationView()
     
     private var viewModel = LoginViewModel()

@@ -27,6 +27,7 @@ class RessetPasswordController: UIViewController {
         let button = UIButton(type: .system)
         button.addTarget(self, action: #selector(handleDismissal), for: .touchUpInside)
         button.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        button.imageView?.setDimensions(height: 30, width: 26)
         button.tintColor = .white
         return button
     }()
@@ -96,6 +97,7 @@ class RessetPasswordController: UIViewController {
                          right: view.rightAnchor, paddingTop: 15,
                          paddingLeft: 30, paddingRight: 30)
         
+
         
     }
 }
