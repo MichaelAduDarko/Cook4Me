@@ -16,23 +16,23 @@ class RegistrationController: UIViewController, UITextFieldDelegate {
     //MARK:- Properties
     private var viewModel = RegistrationViewModel()
     
-    private let signUpLabel = CustomLabel(title: Constant.SignUp, name: Font.Futura, fontSize: 40, color: .systemPink)
+    private let signUpLabel = CustomLabel(title: "Sign Up", name: "Futura-Bold", fontSize: 40, color: .systemPink)
     
-    private let emailTextfield =  CustomTextField(placeholder: Constant.Email ,autoCorrectionType: .no, secureTextEntry: false)
+    private let emailTextfield =  CustomTextField(placeholder: "Email",autoCorrectionType: .no, secureTextEntry: false)
     
-    private let fullNameTextfield =  CustomTextField(placeholder: Constant.FullName,autoCorrectionType: .no, secureTextEntry: false)
+    private let fullNameTextfield =  CustomTextField(placeholder: "FullName",autoCorrectionType: .no, secureTextEntry: false)
     
-    private let passwordTextField = CustomTextField (placeholder: Constant.Password, secureTextEntry: true)
+    private let passwordTextField = CustomTextField (placeholder: "Password", secureTextEntry: true)
     
     private let SignUpButton: CustomButton = {
-        let button = CustomButton(title: Constant.SignUp)
+        let button = CustomButton(title: "Sign Up")
         button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         return button
     }()
     
     
     private let dontHaveAccountButton: CustomDontHaveAccountButton = {
-        let button = CustomDontHaveAccountButton(title: Constant.AlreadyHaveAcc, secondtitle: Constant.Login)
+        let button = CustomDontHaveAccountButton(title: "Already have an account?", secondtitle: "Log In")
         button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
         return button
     }()

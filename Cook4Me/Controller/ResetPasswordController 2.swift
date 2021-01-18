@@ -15,10 +15,10 @@ class RessetPasswordController: UIViewController {
     
     private let iconImage = UIImageView(image: #imageLiteral(resourceName: "reset"))
     
-    private let emailTextfield =  CustomTextField(placeholder: Constant.Email,autoCorrectionType: .no, secureTextEntry: false)
+    private let emailTextfield =  CustomTextField(placeholder: "Email",autoCorrectionType: .no, secureTextEntry: false)
     
     private let resetPasswordButton: CustomButton = {
-        let button = CustomButton(title: Constant.RestPswd)
+        let button = CustomButton(title: "Send Reset Link")
         button.addTarget(self, action: #selector(handleResetPassword), for: .touchUpInside)
         return button
     }()
@@ -26,7 +26,7 @@ class RessetPasswordController: UIViewController {
     private let backButton: UIButton = {
         let button = UIButton(type: .system)
         button.addTarget(self, action: #selector(handleDismissal), for: .touchUpInside)
-        button.setImage(UIImage(systemName: ImageSystemName.ChevronLeft), for: .normal)
+        button.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         button.imageView?.setDimensions(height: 30, width: 26)
         button.tintColor = .white
         return button

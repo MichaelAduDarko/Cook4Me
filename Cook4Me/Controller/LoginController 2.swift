@@ -16,29 +16,29 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     private var viewModel = LoginViewModel()
 
-    private let titlelabel = CustomLabel(title: Constant.TitleLabel, name: Font.Futura, fontSize: 30, color: .white)
+    private let titlelabel = CustomLabel(title: "Welcome\nTo\nCook4Me", name: "Futura-Bold", fontSize: 30, color: .white)
     
-    private let logInLabel = CustomLabel(title: Constant.LogInLabel, name: Font.Futura, fontSize: 25, color: .systemPink)
+    private let logInLabel = CustomLabel(title: "Log In", name: "Futura-Bold", fontSize: 25, color: .systemPink)
     
     
-    private let emailTextfield =  CustomTextField(placeholder: Constant.Email,autoCorrectionType: .no, secureTextEntry: false)
+    private let emailTextfield =  CustomTextField(placeholder: "Email",autoCorrectionType: .no, secureTextEntry: false)
     
-    private let passwordTextField = CustomTextField(placeholder: Constant.Password , secureTextEntry: true)
+    private let passwordTextField = CustomTextField(placeholder: "Password", secureTextEntry: true)
     
     private let loginButton: CustomButton = {
-        let button = CustomButton(title: Constant.Login)
+        let button = CustomButton(title: "Log In")
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
     private let forgotPasswordButton: CustomDontHaveAccountButton = {
-        let button = CustomDontHaveAccountButton(title: Constant.ForgotPswd, secondtitle: Constant.RestPswd)
+        let button = CustomDontHaveAccountButton(title: "Forgot your password?", secondtitle: "Reset")
         button.addTarget(self, action: #selector(handleForgotPassword), for: .touchUpInside)
         return button
     }()
     
     private let dontHaveAccountButton: CustomDontHaveAccountButton = {
-        let button = CustomDontHaveAccountButton(title: Constant.DontHaveAcc, secondtitle:Constant.SignUp)
+        let button = CustomDontHaveAccountButton(title: "Don't have an account?", secondtitle: "Sign Up")
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
@@ -49,7 +49,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     private let googleLoginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "google").withRenderingMode(.alwaysOriginal) , for: .normal)
-        button.setTitle(Constant.GoogleLogin, for: .normal)
+        button.setTitle(" Log in with Google", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.addTarget(self , action: #selector(handleGoogleButton), for: .touchUpInside)
@@ -124,7 +124,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     private func configureUI(){
         
-        animationView.animation = Animation.named(LottieAnimation.LottieName)
+        animationView.animation = Animation.named("cooker")
         animationView.loopMode = .loop
         animationView.contentMode = .scaleAspectFit
         animationView.animationSpeed = 0.8
