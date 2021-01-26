@@ -24,7 +24,10 @@ struct Constant {
     static let FullName = "FullName"
     static let AlreadyHaveAcc = "Already have an account?"
     static let ResetPswd = "Send Reset Link"
-    
+    static let PostLabel = "POST"
+    static let ProfileLabel = "PROFILE"
+    static let HomeLabel = "HOME"
+     
 }
 
 
