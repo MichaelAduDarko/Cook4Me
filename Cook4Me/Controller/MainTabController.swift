@@ -37,13 +37,13 @@ class MainTabController: UITabBarController {
     private func configureUI(){
         
         let home = HomeController()
-        home.tabBarItem.image = #imageLiteral(resourceName: "Home")
+        home.tabBarItem.image = #imageLiteral(resourceName: "icons8-home-page-100")
         
         let post = PostController()
-        post.tabBarItem.image = #imageLiteral(resourceName: "icons8-plus-50")
+        post.tabBarItem.image = #imageLiteral(resourceName: "icons8-add-camera-100")
         
         let profile = ProfileController()
-        profile.tabBarItem.image = #imageLiteral(resourceName: "icons8-account-50")
+        profile.tabBarItem.image = #imageLiteral(resourceName: "icons8-user-100")
         
         
         viewControllers = [home, post, profile]

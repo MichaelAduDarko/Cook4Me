@@ -11,7 +11,7 @@ class PostController: UIViewController {
     
     //MARK:- Properties
     
-   private let titlelabel = CustomLabel(title: Constant.PostLabel, name: Font.Futura, fontSize: 30, color: .white)
+    private let titlelabel = CustomLabel(title: Constant.PostLabel, name: Font.Futura, fontSize: 30, color: .white)
     
     
     override func  viewDidLoad() {
