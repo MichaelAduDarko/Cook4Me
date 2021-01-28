@@ -52,3 +52,7 @@ struct ImageSystemName {
     static let ChevronLeft = "chevron.left"
 }
 
+
+struct Cell {
+    static let CellID = "cell"
+}

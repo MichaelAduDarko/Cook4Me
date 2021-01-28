@@ -11,6 +11,9 @@ import CoreLocation
 
 class HomeController: UIViewController {
     
+    
+lazy var data: [categoryData] = ExampleData.data
+    
     //MARK:- Properties
     
     private let mapView = MKMapView()
@@ -21,9 +24,19 @@ class HomeController: UIViewController {
     
     private let titlelabel = CustomLabel(title: Constant.HomeLabel, name: Font.Futura, fontSize: 25, color: .white)
     
-    
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 20000
+    let regionInMeters: Double = 10000
+    
+    fileprivate let feedCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.backgroundColor = .backgroundColor
+        cv.register(FeedCell.self, forCellWithReuseIdentifier: Cell.CellID) 
+        return cv
+    }()
+    //MARK:- Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +44,7 @@ class HomeController: UIViewController {
         configureUI()
     }
     
+    //MARK:- Helpers
     
     func setupLocationManager() {
         locationManager.delegate = self
@@ -40,7 +54,7 @@ class HomeController: UIViewController {
     
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
-        let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             mapView.setRegion(region, animated: true)
         }
     }
@@ -63,13 +77,11 @@ class HomeController: UIViewController {
             centerViewOnUserLocation()
             locationManager.startUpdatingLocation()
             break
-        case .denied:
+        case .denied, .restricted:
             // Show alert instructing them how to turn on permissions
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
-        case .restricted:
-            // Show an alert letting them know what's up
             break
         case .authorizedAlways:
             break
@@ -85,6 +97,9 @@ class HomeController: UIViewController {
         stackView.distribution = .fillEqually
         
         
+        feedCollectionView.delegate = self
+        feedCollectionView.dataSource = self
+        
         view.addSubview(stackView)
         stackView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
         
@@ -93,6 +108,9 @@ class HomeController: UIViewController {
         
         ContainerTwo.addSubview(titlelabel)
         titlelabel.anchor(top: ContainerTwo.topAnchor, left: ContainerTwo.leftAnchor, paddingTop: 5, paddingLeft: 10)
+        
+        ContainerTwo.addSubview(feedCollectionView)
+        feedCollectionView.anchor(top: titlelabel.bottomAnchor, left: ContainerTwo.leftAnchor, bottom: ContainerTwo.safeAreaLayoutGuide.bottomAnchor, right: ContainerTwo.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0)
     }
 
 }
@@ -115,4 +133,29 @@ extension HomeController: CLLocationManagerDelegate {
         checkLocationAuthorization()
     }
 }
+
+
+
+extension HomeController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width / 1, height: 260)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0 , left: 0 , bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FeedCell
+        cell.data = data[indexPath.item]
+        return cell
+    }
+}
+
 
