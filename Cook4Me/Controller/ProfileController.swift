@@ -22,6 +22,8 @@ class ProfileController: UIViewController {
     
     private func configureUI(){
         view.backgroundColor = .backgroundColor
+        navigationController?.navigationBar.isHidden = true
+    
         
         view.addSubview(titlelabel)
         titlelabel.anchor(top: view.safeAreaLayoutGuide.topAnchor,

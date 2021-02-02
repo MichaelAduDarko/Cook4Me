@@ -10,6 +10,8 @@
 		126400772C6F59912AB2CD49 /* libPods-Cook4Me.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A6BF27605DCFA77ECDF733 /* libPods-Cook4Me.a */; };
 		475669A425B4FD9E00D43EB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475669A325B4FD9E00D43EB3 /* Constants.swift */; };
 		477C330F25B94F4300775FBB /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477C330E25B94F4300775FBB /* MainTabController.swift */; };
+		478B360425C7BFDC008546CC /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478B360325C7BFDC008546CC /* CategoryController.swift */; };
+		478B361D25C7C6C3008546CC /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478B361C25C7C6C3008546CC /* MessageController.swift */; };
 		47A739E525A95BD900FA5251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A739E425A95BD900FA5251 /* AppDelegate.swift */; };
 		47A739E725A95BD900FA5251 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A739E625A95BD900FA5251 /* SceneDelegate.swift */; };
 		47A739EC25A95BD900FA5251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A739EA25A95BD900FA5251 /* Main.storyboard */; };
@@ -30,7 +32,7 @@
 		47A7FF8125BFC3740030545B /* PostContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A7FF8025BFC3740030545B /* PostContoller.swift */; };
 		47A7FF8625BFC3ED0030545B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A7FF8525BFC3ED0030545B /* HomeController.swift */; };
 		47A7FF8B25BFE8240030545B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A7FF8A25BFE8240030545B /* CustomView.swift */; };
-		47A7FFC225C2497B0030545B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A7FFC125C2497B0030545B /* FeedCell.swift */; };
+		47A7FFC225C2497B0030545B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A7FFC125C2497B0030545B /* CategoryCell.swift */; };
 		47A7FFC725C251840030545B /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A7FFC625C251840030545B /* FeedData.swift */; };
 		47FE731925AA75D7002D9200 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE731825AA75D7002D9200 /* DividerView.swift */; };
 		47FE732325AA8458002D9200 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE732225AA8458002D9200 /* ResetPasswordController.swift */; };
@@ -57,6 +59,8 @@
 		2F9BD170D86283D2DAF506C4 /* Pods-Cook4Me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cook4Me.release.xcconfig"; path = "Target Support Files/Pods-Cook4Me/Pods-Cook4Me.release.xcconfig"; sourceTree = "<group>"; };
 		475669A325B4FD9E00D43EB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		477C330E25B94F4300775FBB /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		478B360325C7BFDC008546CC /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		478B361C25C7C6C3008546CC /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		47A739E125A95BD900FA5251 /* Cook4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cook4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A739E425A95BD900FA5251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47A739E625A95BD900FA5251 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +87,7 @@
 		47A7FF8025BFC3740030545B /* PostContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContoller.swift; sourceTree = "<group>"; };
 		47A7FF8525BFC3ED0030545B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		47A7FF8A25BFE8240030545B /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		47A7FFC125C2497B0030545B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		47A7FFC125C2497B0030545B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		47A7FFC625C251840030545B /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedData.swift; path = Cook4Me/View/FeedData.swift; sourceTree = SOURCE_ROOT; };
 		47FE731825AA75D7002D9200 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		47FE732225AA8458002D9200 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				47A7FF7825BFC21B0030545B /* ProfileController.swift */,
 				47A7FF8025BFC3740030545B /* PostContoller.swift */,
 				47A7FF8525BFC3ED0030545B /* HomeController.swift */,
+				478B360325C7BFDC008546CC /* CategoryController.swift */,
+				478B361C25C7C6C3008546CC /* MessageController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,7 +201,7 @@
 				47A73A3825A961AC00FA5251 /* CustomDontHaveAccountButton.swift */,
 				47FE731825AA75D7002D9200 /* DividerView.swift */,
 				47A7FF8A25BFE8240030545B /* CustomView.swift */,
-				47A7FFC125C2497B0030545B /* FeedCell.swift */,
+				47A7FFC125C2497B0030545B /* CategoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,12 +436,14 @@
 				47A73A2F25A9615D00FA5251 /* CustomTextField.swift in Sources */,
 				47A7FF8625BFC3ED0030545B /* HomeController.swift in Sources */,
 				47A73A3925A961AC00FA5251 /* CustomDontHaveAccountButton.swift in Sources */,
+				478B361D25C7C6C3008546CC /* MessageController.swift in Sources */,
 				47A7FFC725C251840030545B /* FeedData.swift in Sources */,
-				47A7FFC225C2497B0030545B /* FeedCell.swift in Sources */,
+				47A7FFC225C2497B0030545B /* CategoryCell.swift in Sources */,
 				475669A425B4FD9E00D43EB3 /* Constants.swift in Sources */,
 				47A73A1E25A95DB800FA5251 /* LoginController.swift in Sources */,
 				47A73A4325A9675800FA5251 /* AuthenticationViewModel.swift in Sources */,
 				47A73A3425A9618000FA5251 /* CustomButton.swift in Sources */,
+				478B360425C7BFDC008546CC /* CategoryController.swift in Sources */,
 				47A739E725A95BD900FA5251 /* SceneDelegate.swift in Sources */,
 				47A73A2325A95EE100FA5251 /* CustomLabel.swift in Sources */,
 				47A7FF7925BFC21B0030545B /* ProfileController.swift in Sources */,

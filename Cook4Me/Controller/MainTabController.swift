@@ -10,12 +10,6 @@ import UIKit
 
 class MainTabController: UITabBarController {
     
-    
-    //MARK:- Properties
-    
-    
-    
-    
     //MARK:- Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,30 +17,35 @@ class MainTabController: UITabBarController {
         configureUI()
     }
     
-    
-    //MARK:- Selectors
-    
-    
-    
-    
-    
-    
     //MARK:- ConfigureUI
-    
     
     private func configureUI(){
         
         let home = HomeController()
-        home.tabBarItem.image = #imageLiteral(resourceName: "icons8-home-page-100")
-        
+        let nav1 = templateNavigationController(image: UIImage(systemName: "house.fill"), rootviewController: home)
+        nav1.title = "Feed"
+    
+
+        let category = CategoryController()
+        let nav2 = templateNavigationController(image: UIImage(systemName: "archivebox.fill"), rootviewController: category)
+        nav2.title = "Categories"
+      
+
         let post = PostController()
-        post.tabBarItem.image = #imageLiteral(resourceName: "icons8-add-camera-100")
-        
+        let nav3 = templateNavigationController(image: UIImage(systemName: "camera.on.rectangle.fill"), rootviewController: post)
+        nav3.title = "Post"
+
+        let message = MessageContoller()
+        let nav4 = templateNavigationController(image: UIImage(systemName: "bubble.right.fill"), rootviewController: message)
+        nav4.tabBarItem.badgeValue = "10"
+        nav4.title = "Message"
+
         let profile = ProfileController()
-        profile.tabBarItem.image = #imageLiteral(resourceName: "icons8-user-100")
+        let nav5 = templateNavigationController(image: UIImage(systemName: "person.fill"), rootviewController: profile)
+        nav5.title = "Profile"
+
         
-        
-        viewControllers = [home, post, profile]
+        viewControllers = [nav1, nav2, nav3, nav4, nav5]
         
         guard  let items = tabBar.items else { return}
         
@@ -56,6 +55,14 @@ class MainTabController: UITabBarController {
         
       
         
+    }
+    
+    func templateNavigationController(image: UIImage?, rootviewController: UIViewController) -> UINavigationController {
+        
+        let nav = UINavigationController(rootViewController: rootviewController)
+        nav.tabBarItem.image = image
+        nav.title = title
+        return nav
     }
     
 }
