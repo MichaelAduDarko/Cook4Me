@@ -9,10 +9,17 @@ import UIKit
 
 class MessageContoller: UIViewController {
     
-    
+    //MARK:- Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
         
-        view.backgroundColor = .red
+        
+    }
+    
+    
+    func configureUI(){
+        view.backgroundColor = .black
+        configureNavigationBar(withTitle: "Message", prefersLargeTitles: true)
     }
 }

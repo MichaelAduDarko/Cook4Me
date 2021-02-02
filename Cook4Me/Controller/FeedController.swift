@@ -1,36 +1,43 @@
 //
-//  CategoryController.swift
+//  HomeController.swift
 //  Cook4Me
 //
-//  Created by MICHAEL ADU DARKO on 1/31/21.
+//  Created by MICHAEL ADU DARKO on 1/25/21.
 //
 
 import UIKit
 
-
-class CategoryController: UIViewController {
+class FeedController: UIViewController {
     
-    lazy var data: [categoryData] = ExampleData.data
+    lazy var _data: [feedData] = dummyData._data
     
-    //Mark:- Properties
+    //MARK:- Propeties
     fileprivate let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsVerticalScrollIndicator = false
         cv.backgroundColor = .backgroundColor
-        cv.register(CategoryCell.self, forCellWithReuseIdentifier: "cell")
+        cv.register(FeedCell.self, forCellWithReuseIdentifier: "cell")
         
         return cv
     }()
     
+    
+    
+    //MARK:- Lifecycle
     override func viewDidLoad() {
-        configureCategoryVC()
-        searchController()
+        super.viewDidLoad()
+        configureUI()
+    }
+    
+    
+    //MARK:- Helper
+    func configureUI(){
+        view.backgroundColor = .backgroundColor
+        configureNavigationBar(withTitle: "Market", prefersLargeTitles: true)
+        
         view.addSubview(collectionView)
-        
-        configureNavigationBar(withTitle: "Categories", prefersLargeTitles: true)
-        
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
@@ -39,24 +46,16 @@ class CategoryController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.register(CategoryCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(FeedCell.self, forCellWithReuseIdentifier: "cell")
+        
     }
     
-    func configureCategoryVC(){
-        view.backgroundColor = .backgroundColor
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.prefersLargeTitles = true
     
-    }
-    
-    private func searchController(){
-        let searchController = UISearchController(searchResultsController: nil)
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-    }
 }
 
-extension CategoryController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
+
+
+extension FeedController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (view.frame.width / 2) - 20
@@ -65,7 +64,7 @@ extension CategoryController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return _data.count
     }
     
     
@@ -74,12 +73,9 @@ extension CategoryController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CategoryCell
-        cell.data = data[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FeedCell
+        cell.data = _data[indexPath.item]
         return cell
     }
 }
-
-
-
 
